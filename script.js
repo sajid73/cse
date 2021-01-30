@@ -12,3 +12,7 @@ function darkTheme(isDark){
         document.getElementById('bodyId').style.color = "black"
     }
 }
+
+function routineShow(){
+    document.getElementById('routine').style.display = "table"
+}
