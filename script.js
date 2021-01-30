@@ -12,7 +12,14 @@ function darkTheme(isDark){
         document.getElementById('bodyId').style.color = "black"
     }
 }
-
-function routineShow(){
-    document.getElementById('routine').style.display = "table"
-}
+var flag = 0
+document.getElementById('routineBtn').addEventListener("click",function(){
+    if(flag == 0){
+        document.getElementById('routine').style.display = "table"
+        flag = 1
+    }
+    else{
+        document.getElementById('routine').style.display = "none"
+        flag = 0
+    }
+})
