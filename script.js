@@ -4,6 +4,7 @@ function darkTheme(isDark){
         document.getElementById('whiteBtn').style.display = "block"
         document.getElementById('bodyId').style.backgroundColor = "black"
         document.getElementById('bodyId').style.color = "white"
+        document.getElementsByClassName('nav-item').style.color = "white"
     }
     else{
         document.getElementById('darkBtn').style.display = "block"

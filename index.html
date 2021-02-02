@@ -1,122 +1,164 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
 
+    <!-- own css -->
     <link rel="stylesheet" href="style.css">
-    <title>CSE 18</title>
-</head>
-<body id="bodyId" class="container">
-    <ul class="nav nav-tabs" id="myTab tabcustom" role="tablist">
-        <li class="nav-item" role="presentation">
-          <a class="nav-link active" id="home-tab" data-bs-toggle="tab" href="#home" role="tab" aria-controls="home" aria-selected="true">Home</a>
-        </li>
-        <li class="nav-item" role="presentation">
-          <a class="nav-link" id="profile-tab" data-bs-toggle="tab" href="#dept" role="tab" aria-controls="dept" aria-selected="false">CSE - 223</a>
-        </li>
-        <li class="nav-item" role="presentation">
-          <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#ada" role="tab" aria-controls="contact" aria-selected="false">CSE - 243</a>
-        </li>
-        <li class="nav-item" role="presentation">
-          <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#dbms" role="tab" aria-controls="contact" aria-selected="false">CSE - 251</a>
-        </li>
-        <li class="nav-item" role="presentation">
-          <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#edi" role="tab" aria-controls="contact" aria-selected="false">EE - 283</a>
-        </li>
-        <li class="nav-item" role="presentation">
-          <a class="nav-link" id="contact-tab" data-bs-toggle="tab" href="#math" role="tab" aria-controls="contact" aria-selected="false">Math 243</a>
-        </li>
-    </ul>
+
+    <!-- font awesome -->
+    <script src="https://kit.fontawesome.com/29dec46569.js" crossorigin="anonymous"></script>
+
+    <link rel="shortcut icon" href="images/logo.png" type="image/x-icon">
+    <title>CSE</title>
+  </head>
+  <body class="container" id="bodyId">
+    <div class="container">
+      <nav class="navbar justify-content-end navbar-expand-lg navbar-light">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span>   
+            <img src="images/menu.png" alt="">
+        </span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+          <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <a class="nav-link active" id="pills-home-tab" data-bs-toggle="pill" href="#pills-home" role="tab" aria-controls="pills-home" aria-selected="true">Home</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="pills-syllabus-tab" data-bs-toggle="pill" href="#pills-syllabus" role="tab" aria-controls="pills-syllabus" aria-selected="false">Syllabus</a>
+            </li>
+            <li class="nav-item" role="presentation">
+              <a class="nav-link" id="pills-resources-tab" data-bs-toggle="pill" href="#pills-resources" role="tab" aria-controls="pills-resources" aria-selected="false">Resources</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </div>
     <button class="float-end btn btn-dark" id="darkBtn" onclick="darkTheme(true)">Dark</button>
     <button class="float-end btn btn-dark" id="whiteBtn" style="display: none;" onclick="darkTheme(false)">Back to normal</button>
-
-      <section>
-      <div class="tab-content" id="myTabContent">
-        <div class="tab-pane fade show active t-formate" id="home" role="tabpanel" aria-labelledby="home-tab">
-            <h1>Routine & Syllabus</h1>
+    
+    <div class="tab-content" id="pills-tabContent">
+      <div class="tab-pane fade show active t-formate" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+        <h1>Routine & Syllabus</h1>
             <br><br>
-            <button id="routineBtn" class="btn btn-warning"><b>Class routine(link included)</b></button><br>
+            <button id="routineBtn" class="btn btn-warning"><b>Class routine (B section)</b></button><br>
             <table style="display: none;" class="table table-striped" id="routine">
-                <br>
-                <tr class="table-dark">
-                    <td>Time</td>
-                    <td>10 to 11 am</td>
-                    <td>11 to 12 am</td>
-                    <td>12 to 01 am</td>
-                    <td>01 to 02 am</td>
-                </tr>
-                <tr class="table-warning">
-                    <td>Sunday</td>
-                    <td>CSE - 251</td>
-                    <td>EE - 283</td>
-                    <td>CSE - 223</td>
-                    <td>Math - 243</td>
-                </tr>
-                <tr class="table-secondary">
-                    <td>Monday</td>
-                    <td>CSE - 243</td>
-                    <td>Math - 243</td>
-                    <td>EE - 283</td>
-                    <td>CSE - 223</td>
-                </tr>
-                <tr class="table-danger">
-                    <td>Tuesday</td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                    <td> </td>
-                </tr>
-                <tr class="table-primary">
-                    <td>Wednesday</td>
-                    <td>CSE - 223</td>
-                    <td>CSE - 243</td>
-                    <td>CSE - 251</td>
-                    <td>EE - 283</td>
-                </tr>
-                <tr class="table-info">
-                    <td>Thursday</td>
-                    <td>Math - 243</td>
-                    <td>CSE - 251</td>
-                    <td> </td>
-                    <td>CSE - 243</td>
-                </tr>
-            </table>
-        </div>
-        <div class="tab-pane fade t-formate" id="dept" role="tabpanel" aria-labelledby="profile-tab">
-            <h2>Digital Electronic & Pulse Techniques</h2><hr>
+              <br>
+              <tr class="table-dark">
+                  <td>Time</td>
+                  <td>10 to 11 am</td>
+                  <td>11 to 12 am</td>
+                  <td>12 to 01 am</td>
+                  <td>01 to 02 am</td>
+              </tr>
+              <tr class="table-warning">
+                  <td>Sunday</td>
+                  <td>CSE - 251</td>
+                  <td>EE - 283</td>
+                  <td>CSE - 223</td>
+                  <td>Math - 243</td>
+              </tr>
+              <tr class="table-secondary">
+                  <td>Monday</td>
+                  <td>CSE - 243</td>
+                  <td>Math - 243</td>
+                  <td>EE - 283</td>
+                  <td>CSE - 223</td>
+              </tr>
+              <tr class="table-danger">
+                  <td>Tuesday</td>
+                  <td> </td>
+                  <td> </td>
+                  <td> </td>
+                  <td> </td>
+              </tr>
+              <tr class="table-primary">
+                  <td>Wednesday</td>
+                  <td>CSE - 223</td>
+                  <td>CSE - 243</td>
+                  <td>CSE - 251</td>
+                  <td>EE - 283</td>
+              </tr>
+              <tr class="table-info">
+                  <td>Thursday</td>
+                  <td>Math - 243</td>
+                  <td>CSE - 251</td>
+                  <td> </td>
+                  <td>CSE - 243</td>
+              </tr>
+          </table>
+      </div>
+      <div class="tab-pane fade s-formate" id="pills-syllabus" role="tabpanel" aria-labelledby="pills-profile-tab">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="list-group" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action active" id="list-dept-list" data-bs-toggle="list" href="#list-dept" role="tab" aria-controls="home">CSE-223</a>
+              <a class="list-group-item list-group-item-action" id="list-ada-list" data-bs-toggle="list" href="#list-ada" role="tab" aria-controls="profile">CSE-243</a>
+              <a class="list-group-item list-group-item-action" id="list-dbms-list" data-bs-toggle="list" href="#list-dbms" role="tab" aria-controls="messages">CSE-251</a>
+              <a class="list-group-item list-group-item-action" id="list-edi-list" data-bs-toggle="list" href="#list-edi" role="tab" aria-controls="settings">EE-283</a>
+              <a class="list-group-item list-group-item-action" id="list-math-list" data-bs-toggle="list" href="#list-math" role="tab" aria-controls="settings">Math-243</a>
+            </div>
+          </div>
+          <div class="col-md-8">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active text-justify" id="list-dept" role="tabpanel" aria-labelledby="list-dept-list">
+                <h2>Digital Electronic & Pulse Techniques</h2><hr>
             <p>Diode logic gates, transistor switches, transistor gates, MOS gates; Logic Families: RTL, TTL, IIL and CMOS logic with operation details; Basic ECL circuit, ECL OR/NOR gate, ECL characteristics, Propagation delay, product and noise immunity, fan-in and fan-out. Open collector and high impedance gates, Electronic circuits for flip-flops, counters and register, memory systems, PLA’s; A/D and D/A converters with applications; Sample and hold circuit, LEC, LCD and optically coupled oscillators, Non-linear applications of OP AMPs; Analog switches.</p>
             <p><b>Linear wave shaping:</b> Diode wave shaping technique s, clipping and clamping circuits, comparator, circuits, switching circuits; pulse transformers, pulse transmission, pulse generation, monostable, bitable and astable multivibrations, Schmitt trigger, blocking oscillators and time-base circuit; Timing circuits, Simple voltage sweeps, linear current sweeps.</p>
-        </div>
-        <div class="tab-pane fade t-formate" id="ada" role="tabpanel" aria-labelledby="contact-tab">
-            <h2>Algorithms Design and Analysis</h2><hr>
+              </div>
+              <div class="tab-pane fade" id="list-ada" role="tabpanel" aria-labelledby="list-ada-list">
+                <h2>Algorithms Design and Analysis</h2><hr>
             <p><b>Efficient algorithm designing techniques:</b> Divide-and-Conquer paradigm, Greedy method, Dynamic programming, Backtracking, Branch and bound; Flow algorithms; Approximation Algorithms; Introduction to parallel and randomized algorithms;</p>
             <p><b>Analysis of algorithms:</b> Complexity Analysis, Master Method, Correctness and loop invariants, Algebraic simplification and transformations, Lower bound theory, NP completeness, NP-hard and NP-complete problems;</p>
             <p><b>Search and traversal:</b> Basic search and traversal technique, Shortest path problems, Topological sorting, Connected components, Spanning trees; Graph algorithms.</p>
-
-        </div>
-        <div class="tab-pane fade t-formate" id="dbms" role="tabpanel" aria-labelledby="contact-tab">
-            <h2>Data Base Management Systems</h2><hr>
+              </div>
+              <div class="tab-pane fade" id="list-dbms" role="tabpanel" aria-labelledby="list-dbms-list">
+                <h2>Data Base Management Systems</h2><hr>
             <p><b>Concepts of database systems; Data Models:</b> Entity-Relationship model, Relational model; Query Language: Relational algebra, SQL; Constraints and triggers; Functional dependencies and normalization; File organization and data storage; Indexing: primary and secondary indexes, B+ trees, hash tables; Query optimization; Transaction management; Recovery; Concurrency control; Access control and security; Semi-structured database: XML, XPath, XQuery; Object oriented and object relational databases, Introduction to NoSQL Database.</p>
-        </div>
-        <div class="tab-pane fade t-formate" id="edi" role="tabpanel" aria-labelledby="contact-tab">
-            <h2>Electrical Drives and Instrumentation</h2><hr>
+              </div>
+              <div class="tab-pane fade" id="list-edi" role="tabpanel" aria-labelledby="list-edi-list">
+                <h2>Electrical Drives and Instrumentation</h2><hr>
             <p><b>DC Machines:</b> Operation and performance characteristics of generators and motors. Starting, speed control and braking of motors. Different application of DC motors.</p>
             <p><b>AC Machines:</b> Transformer Principle of operation of transformer, Single and three phase induction motors and their methods of starting</p>
             <p><b>Synchronous Machines and Motors:</b> Principles of operation and equivalent circuit. Method of synchronization. Special motors: Stepper motor, Servomotor, Brush less motors.</p>
             <p><b>Measuring Instruments:</b> Electromechanical and electronic meters and their uses. Extension of Instrument range, Data acquisition and Interfacing to microprocessor-based systems.</p>
             <p><b>Transducers:</b> Different types of transducers and their principle of operations: Position and displacement Transducers, Potentiometer, Linear variable differential transformers (LVDT), Pressure transducer Temperature transducer, Optical transducer, Ultrasonic transducer: Humidity transducer, Hall Effect transducer, and Speed transducer.</p>
-        </div>
-        <div class="tab-pane fade t-formate" id="math" role="tabpanel" aria-labelledby="contact-tab">
-            <h2>Fourier Analysis and Laplace Transformation</h2><hr>
+              </div>
+              <div class="tab-pane fade" id="list-math" role="tabpanel" aria-labelledby="list-math-list">
+                <h2>Fourier Analysis and Laplace Transformation</h2><hr>
             <p><b>Fourier Analysis:</b> Fourier series and Fourier coefficients, Dirichlet's condition and Fourier expansion, Convergence of Fourier series, Exponential form of Fourier series, Change of interval, Half range series, Parseval's identity, Fourier integrals. Fourier Transforms: General transforms, Fourier sine and cosine transforms and their use in boundary value problems.</p>
             <p><b>Laplace transforms:</b> Definition, Laplace transforms of some elementary functions, Sufficient conditions for existence of Laplace Chod transforms, Inverse Laplace transforms, Laplace transforms of derivatives, The unit step function, Periodic function, Some special theorems on Laplace transforms, Partial fraction, Solutions of differential equations by Laplace transforms, Evaluation of improper Integrals, Application in engineering problems.</p>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </section>
-    <script src="script.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
-</body>
+      <div class="tab-pane fade text-center s-formate" id="pills-resources" role="tabpanel" aria-labelledby="pills-resources-tab">
+        <h1>In progress </h1>
+        <div class="spinner-border text-success m-4" role="status">
+          <span class="visually-hidden">Loading...</span>
+        </div>
+        <div class="alert alert-primary text-center" role="alert">
+          <p>This section is not available right now !</p> 
+        </div>
+      </div>
+    </div>
+
+    
+
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+   <script src="script.js"></script>
+  </body>
 </html>

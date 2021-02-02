@@ -5,3 +5,13 @@
 .t-formate p{
     text-align: justify;
 }
+.s-formate{
+    margin-top: 6vh;
+    padding: 1%;
+}
+.s-formate p{
+    text-align: justify;
+}
+h2{
+    text-align: center;
+}
