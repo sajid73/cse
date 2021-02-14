@@ -29,34 +29,29 @@ var flag = 0
         flag = 0
     }
 })
-let i =0
 const timezonebtn = () => {
-    fetch('http://worldtimeapi.org/api/timezone/Asia/Dhaka')
-    .then(res => res.json())
-    .then(data => {
-        let time = data.datetime
-        let week = data.day_of_week
-        i++
-        let date = time.slice(0,10)
-        let dtime = time.slice(11,19)
-        const ctime = dtime.slice(0,5)
-        classTime(ctime,week)
-        document.getElementById('datediv').innerHTML = `<h5>Date : ${date}</h5>`
-        document.getElementById('timediv').innerHTML = `<h6>Time : ${dtime}</h6>`
-    })
-    .catch(err => {
-        document.getElementById('classBtn').innerHTML = `<i class="text-danger"><b>No Internet</b></i>`
-    })
+    {
+    let time = new Date()
+    const hour = time.getHours()
+    const mins = time.getMinutes()
+    const date = time.getDate()
+    const month = time.getMonth()
+    const year = time.getFullYear()
+    const seconds = time.getSeconds()
+    const week = time.getDay()
+        classTime(hour,mins,week)
+        document.getElementById('datediv').innerHTML = `<h5>Date : ${date}/${month}/${year}</h5>`
+        document.getElementById('timediv').innerHTML = `<h6>Time : ${hour}:${mins}:${seconds}</h6>`
+    }
+    {
+        // document.getElementById('classBtn').innerHTML = `<i class="text-danger"><b>No Internet</b></i>`
+    }
 }
 setInterval(() => {
     timezonebtn()
 }, 1000);
 
-const classTime = (time,week) => {
-    let hour = time.slice(0,2)
-    let mins = time.slice(3,5)
-    hour = parseInt(hour);
-    mins = parseInt(mins);
+const classTime = (hour,mins,week) => {
     const classbtn = document.getElementById('classBtn')
     if(week === 0){
         // classbtn.innerHTML = `<a href="${ee283}" target="_blank"><button class="btn btn-success"><b>EE - 223</b></button></a>`
