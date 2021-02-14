@@ -6,7 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- Bootstrap CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous"> -->
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <!-- own css -->
     <link rel="stylesheet" href="style.css">
@@ -23,7 +28,7 @@
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span>   
             <img src="images/menu.png" alt="">
-        </span>
+          </span>
         </button>
         <div class="collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
           <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
@@ -43,11 +48,17 @@
     <button class="float-end btn btn-dark" id="darkBtn" onclick="darkTheme(true)">Dark</button>
     <button class="float-end btn btn-dark" id="whiteBtn" style="display: none;" onclick="darkTheme(false)">Back to normal</button>
     
+    <div id="datediv" class="d-flex justify-content-end">
+    </div>
+    <div id="timediv" class="d-flex justify-content-end">
+    </div>
+
     <div class="tab-content" id="pills-tabContent">
       <div class="tab-pane fade show active t-formate" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
         <h1>Routine & Syllabus</h1>
-            <br><br>
-            <button id="routineBtn" class="btn btn-warning"><b>Class routine (B section)</b></button><br>
+        <br><br>
+        <span>Right now : <span id="classBtn"></span></span><br><br>
+        <button id="routineBtn" class="btn btn-warning"><b>Class routine (B section)</b></button><br>
             <table style="display: none;" class="table table-striped" id="routine">
               <br>
               <tr class="table-dark">
@@ -61,8 +72,8 @@
                   <td>Sunday</td>
                   <td>CSE - 251</td>
                   <td>EE - 283</td>
-                  <td>CSE - 223</td>
                   <td>Math - 243</td>
+                  <td>CSE - 223</td>
               </tr>
               <tr class="table-secondary">
                   <td>Monday</td>
@@ -94,7 +105,7 @@
               </tr>
           </table>
       </div>
-      <div class="tab-pane fade s-formate" id="pills-syllabus" role="tabpanel" aria-labelledby="pills-profile-tab">
+      <div class="tab-pane fade s-formate" id="pills-syllabus" role="tabpanel" aria-labelledby="pills-syllabus-tab">
         <div class="row">
           <div class="col-md-4">
             <div class="list-group" id="list-tab" role="tablist">
@@ -141,16 +152,14 @@
       </div>
       <div class="tab-pane fade text-center s-formate" id="pills-resources" role="tabpanel" aria-labelledby="pills-resources-tab">
         <h1>In progress </h1>
-        <div class="spinner-border text-success m-4" role="status">
+        <!-- <div class="spinner-border text-success m-4" role="status">
           <span class="visually-hidden">Loading...</span>
-        </div>
+        </div> -->
         <div class="alert alert-primary text-center" role="alert">
           <p>This section is not available right now !</p> 
         </div>
       </div>
     </div>
-
-    
 
 
     <!-- Optional JavaScript; choose one of the two! -->
