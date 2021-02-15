@@ -2,8 +2,8 @@ const cse223 = 'https://bdren.zoom.us/j/66335581257'
 const cse243 = 'https://bdren.zoom.us/j/63691531335?pwd=ZXJJZVAvelZyclNNcVJnTk5oY2w0dz09'
 const cse251 = 'https://bdren.zoom.us/j/61811326956?pwd=NmRuQlVFVXd2cUpXSWtBS3RWY2VRQT09'
 const ee283 = 'https://bdren.zoom.us/j/65149035376'
-const math243 = ''
 const gmail = 'https://mail.google.com/'
+const math243 = gmail
 function darkTheme(isDark){
     if(isDark == true){
         document.getElementById('darkBtn').style.display = "none"
