@@ -52,19 +52,18 @@ setInterval(() => {
 }, 1000);
 
 const classTime = (hour,mins,week) => {
-    console.log(hour, mins, week);
     const classbtn = document.getElementById('classBtn')
     if(week === 0){
-        if(hour == 09 && mins >55){
+        if((hour == 9 || hour == 10) && (mins<45 || mins>54)){
             classbtn.innerHTML = `<a href="${cse243}" target="_blank"><button class="btn btn-danger"><b>CSE - 243</b></button></a>`
         }
-        else if((hour == 10 || hour == 11) && (mins<30 || mins>54)){
+        else if((hour == 10 || hour == 11) && (mins<45 || mins>54)){
             classbtn.innerHTML = `<a href="${math243}" target="_blank"><button class="btn btn-success"><b>Math - 243</b></button></a>`
         }
-        else if ((hour == 11 || hour == 12) && (mins<30 || mins>54)) {
+        else if ((hour == 11 || hour == 12) && (mins<45 || mins>54)) {
             classbtn.innerHTML = `<a href="${ee283}" target="_blank"><button class="btn btn-success"><b>EE - 283</b></button></a>`
         }
-        else if((hour == 12 || hour == 13) && (mins<30 || mins>54)){
+        else if((hour == 12 || hour == 13) && (mins<45 || mins>54)){
             classbtn.innerHTML = `<a href="${cse223}" target="_blank"><button class="btn btn-success"><b>CSE - 223</b></button></a>`
         }
         else{
@@ -72,16 +71,16 @@ const classTime = (hour,mins,week) => {
         }
     }
     else if(week == 1){
-        if(hour == 09 && mins >55){
+        if((hour == 9 || hour == 10) && (mins<45 || mins>54)){
             classbtn.innerHTML = `<a href="${cse243}" target="_blank"><button class="btn btn-danger"><b>CSE - 243</b></button></a>`
         }
-        else if((hour == 10 || hour == 11) && (mins<30 || mins>54)){
-            classbtn.innerHTML = `<a href="${math243}" target="_blank"><button class="btn btn-success"><b>Math - 243</b></button></a>`
-        }
-        else if ((hour == 11 || hour == 12) && (mins<30 || mins>54)) {
+        // else if((hour == 10 || hour == 11) && (mins<45 || mins>54)){
+        //     classbtn.innerHTML = `<a href="${math243}" target="_blank"><button class="btn btn-success"><b>Math - 243</b></button></a>`
+        // }
+        else if ((hour == 11 && mins>54 ) || (mins<45 || hour == 12)) {
             classbtn.innerHTML = `<a href="${ee283}" target="_blank"><button class="btn btn-success"><b>EE - 283</b></button></a>`
         }
-        else if((hour == 12 || hour == 13) && (mins<30 || mins>54)){
+        else if((hour == 12 || hour == 13) && (mins<45 || mins>54)){
             classbtn.innerHTML = `<a href="${cse223}" target="_blank"><button class="btn btn-success"><b>CSE - 223</b></button></a>`
         }
         else{
@@ -92,16 +91,16 @@ const classTime = (hour,mins,week) => {
         classbtn.innerHTML = `<b style="color: green">NO CLASS</b>`;
     }
     else if(week === 3){
-        if(hour == 09 && mins >55){
+        if((hour == 9 || hour == 10) && (mins<45 || mins>54)){
             classbtn.innerHTML = `<a href="${cse243}" target="_blank"><button class="btn btn-danger"><b>CSE - 243</b></button></a>`
         }
-        else if((hour == 10 || hour == 11) && (mins<30 || mins>54)){
+        else if((hour == 10 || hour == 11) && (mins<45 || mins>54)){
             classbtn.innerHTML = `<a href="${math243}" target="_blank"><button class="btn btn-success"><b>Math - 243</b></button></a>`
         }
-        else if ((hour == 11 || hour == 12) && (mins<30 || mins>54)) {
+        else if ((hour == 11 || hour == 12) && (mins<45 || mins>54)) {
             classbtn.innerHTML = `<a href="${ee283}" target="_blank"><button class="btn btn-success"><b>EE - 283</b></button></a>`
         }
-        else if((hour == 12 || hour == 13) && (mins<30 || mins>54)){
+        else if((hour == 12 || hour == 13) && (mins<45 || mins>54)){
             classbtn.innerHTML = `<a href="${cse223}" target="_blank"><button class="btn btn-success"><b>CSE - 223</b></button></a>`
         }
         else{
@@ -109,16 +108,16 @@ const classTime = (hour,mins,week) => {
         }
     }
     else if(week === 4){
-        if(hour == 09 && mins >55){
+        if((hour == 9 || hour == 10) && (mins<45 || mins>54)){
             classbtn.innerHTML = `<a href="${cse243}" target="_blank"><button class="btn btn-danger"><b>CSE - 243</b></button></a>`
         }
-        else if((hour == 10 || hour == 11) && (mins<30 || mins>54)){
+        else if((hour == 10 || hour == 11) && (mins<45 || mins>54)){
             classbtn.innerHTML = `<a href="${math243}" target="_blank"><button class="btn btn-success"><b>Math - 243</b></button></a>`
         }
-        else if ((hour == 11 || hour == 12) && (mins<30 || mins>54)) {
+        else if ((hour == 11 || hour == 12) && (mins<45 || mins>54)) {
             classbtn.innerHTML = `<a href="${ee283}" target="_blank"><button class="btn btn-success"><b>EE - 283</b></button></a>`
         }
-        else if((hour == 12 || hour == 13) && (mins<30 || mins>54)){
+        else if((hour == 12 || hour == 13) && (mins<45 || mins>54)){
             // classbtn.innerHTML = `<a href="${cse223}" target="_blank"><button class="btn btn-success"><b>CSE - 223</b></button></a>`
         }
         else{
