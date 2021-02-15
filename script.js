@@ -1,5 +1,5 @@
 const cse223 = 'https://bdren.zoom.us/j/66335581257'
-const cse243 = ''
+const cse243 = 'https://bdren.zoom.us/j/63691531335?pwd=ZXJJZVAvelZyclNNcVJnTk5oY2w0dz09'
 const cse251 = ''
 const ee283 = 'https://bdren.zoom.us/j/65149035376'
 const math243 = ''
@@ -65,7 +65,9 @@ const classTime = (hour,mins,week) => {
         }
     }
     else if(week === 1){
-        // classbtn.innerHTML = `<a href="${cse243}" target="_blank"><button class="btn btn-success"><b>CSE - 243</b></button></a>`
+        if(hour === 09 && mins >=55){
+        classbtn.innerHTML = `<a href="${cse243}" target="_blank"><button class="btn btn-success"><b>CSE - 243</b></button></a>`
+        }
         // classbtn.innerHTML = `<a href="${math243}" target="_blank"><button class="btn btn-success"><b>Math - 243</b></button></a>`
         if (hour === 11 && mins >= 54) {
             classbtn.innerHTML = `<a href="${ee283}" target="_blank"><button class="btn btn-success"><b>EE - 283</b></button></a>`
