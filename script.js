@@ -1,6 +1,6 @@
 const cse223 = 'https://bdren.zoom.us/j/66335581257'
 const cse243 = 'https://bdren.zoom.us/j/63691531335?pwd=ZXJJZVAvelZyclNNcVJnTk5oY2w0dz09'
-const cse251 = ''
+const cse251 = 'https://bdren.zoom.us/j/61811326956?pwd=NmRuQlVFVXd2cUpXSWtBS3RWY2VRQT09'
 const ee283 = 'https://bdren.zoom.us/j/65149035376'
 const math243 = ''
 const gmail = 'https://mail.google.com/'
@@ -68,8 +68,10 @@ const classTime = (hour,mins,week) => {
         if(hour === 09 && mins >=55){
         classbtn.innerHTML = `<a href="${cse243}" target="_blank"><button class="btn btn-danger"><b>CSE - 243</b></button></a>`
         }
-        // classbtn.innerHTML = `<a href="${math243}" target="_blank"><button class="btn btn-success"><b>Math - 243</b></button></a>`
-        if (hour === 11 && mins >= 54) {
+        else if(hour === 10 && mins >= 55){
+        classbtn.innerHTML = `<a href="${math243}" target="_blank"><button class="btn btn-success"><b>Math - 243</b></button></a>`
+        }
+        else if (hour === 11 && mins >= 54) {
             classbtn.innerHTML = `<a href="${ee283}" target="_blank"><button class="btn btn-success"><b>EE - 283</b></button></a>`
         }
         else if(hour === 12 && mins >= 54){
