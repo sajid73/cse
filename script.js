@@ -66,7 +66,7 @@ const classTime = (hour,mins,week) => {
     }
     else if(week === 1){
         if(hour === 09 && mins >=55){
-        classbtn.innerHTML = `<a href="${cse243}" target="_blank"><button class="btn btn-success"><b>CSE - 243</b></button></a>`
+        classbtn.innerHTML = `<a href="${cse243}" target="_blank"><button class="btn btn-danger"><b>CSE - 243</b></button></a>`
         }
         // classbtn.innerHTML = `<a href="${math243}" target="_blank"><button class="btn btn-success"><b>Math - 243</b></button></a>`
         if (hour === 11 && mins >= 54) {
